@@ -1,0 +1,29 @@
+name: "Kepp a Changelog"
+description: "Action to keep your CHANGELOG.md up to date"
+author: "Vlad Emelianov"
+
+runs:
+  using: "node12"
+  main: "index.js"
+
+inputs:
+  version:
+    description: "New product version (env VERSION)"
+    required: false
+  token:
+    description: "GitHub Token (env GITHUB_TOKEN)"
+    required: false
+  repository:
+    description: "GitHub repository name (env GITHUB_REPOSITORY)"
+    required: false
+  path:
+    description: "Path to CHANGELOG.md (./CHANGELOG.md)"
+    required: false
+
+outputs:
+  pulls_list_md:
+    description: "Generated included Pull Requests list in MarkDown format"
+
+branding:
+  icon: "hash"
+  color: "green"
