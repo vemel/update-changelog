@@ -19,6 +19,9 @@ inputs:
   path:
     description: "Path to CHANGELOG.md (./CHANGELOG.md)"
     required: false
+  release-marker:
+    description: "Case-insensitive release marker in PR title (release)"
+    required: false
 
 outputs:
   pulls_list_md:

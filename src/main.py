@@ -31,6 +31,7 @@ def get_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser("releaser")
     parser.add_argument("--changelog-path", type=Path, default=Path("CHANGELOG.md"))
     parser.add_argument("-v", "--version", default=None)
+    parser.add_argument("--release-marker", default="release")
     return parser
 
 
@@ -51,8 +52,10 @@ class FileUpdater:
 
     RELEASE_NAME = "release"
 
-    def __init__(self) -> None:
+    def __init__(self, logger: logging.Logger, release_marker: str) -> None:
         self._env = GitHubEnv()
+        self.logger = logger
+        self.release_marker = release_marker
         self.client = Github(self._env.github_token)
         self.repo = self.client.get_repo(self._env.github_repository)
         self.repo.get_pulls()
@@ -63,7 +66,10 @@ class FileUpdater:
         result: List[PullRequest] = []
         pull: PullRequest
         for pull in self.repo.get_pulls(direction="desc", state="closed"):
+            if self.release_marker in pull.title.lower():
+                break
             result.append(pull)
+            self.logger.debug(f"Found PR #{pull.number}: {pull.title}")
 
         result.reverse()
         return result
@@ -78,15 +84,17 @@ class FileUpdater:
             "Security": [],
             "Other": [],
         }
+        section_keys = set(sections.keys())
         for pull in self.pulls_list:
             section: Optional[str] = None
             lines = pull.body.split("\n")
             for line in lines:
-                if not line.strip():
+                line = line.strip()
+                if not line:
                     continue
                 if line.startswith("#") and " " in line:
                     header = line.split(" ", 1)[-1]
-                    if header in sections.keys():
+                    if header in section_keys:
                         section = header
                     continue
 
@@ -112,7 +120,7 @@ class FileUpdater:
         )
         if "# [Released]" not in old_changelog:
             header = f"{old_changelog}\n"
-            footer = ""
+            footer = "\n"
         else:
             header, footer = old_changelog.split("# [Released]", 1)
 
@@ -142,7 +150,7 @@ def main() -> None:
     logger = get_logger()
     try:
         args = get_parser().parse_args()
-        file_updater = FileUpdater()
+        file_updater = FileUpdater(logger, release_marker=args.release_marker)
         if args.version:
             file_updater.update_changelog(args.changelog_path, args.version)
 
