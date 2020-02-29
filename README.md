@@ -1,8 +1,8 @@
-# keep-a-changelog
+# Update CHANGELOG.md Action
 
 This Action keeps your CHANGELOG.md up to date.
 
-- [keep-a-changelog](#keep-a-changelog)
+- [Update CHANGELOG.md Action](#update-changelogmd-action)
   - [Getting started](#getting-started)
   - [Examples](#examples)
   - [Variables](#variables)
@@ -40,7 +40,7 @@ jobs:
           echo "Preparing version ${VERSION}"
           echo "__version__ = \"${VERSION}\"" > __version__.py
           echo "##[set-output name=version;]$(echo ${VERSION})"
-      - uses: vemel/keep-a-changelog@0.0.1
+      - uses: vemel/update-changelog@0.0.1
         id: changelog
         with:
           version: ${{ steps.version.outputs.version }}

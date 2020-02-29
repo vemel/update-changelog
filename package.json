@@ -1,5 +1,5 @@
 {
-  "name": "keep-a-changelog",
+  "name": "@actions/update-changelog",
   "version": "0.0.1",
   "description": "Manager for your changelog.",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "git@github.com:vemel/keep-a-changelog.git",
+  "repository": "git@github.com:vemel/update-changelog.git",
   "author": "Vlad Emelianov <volshebnyi@gmail.com>",
   "license": "MIT",
   "private": true,
@@ -24,7 +24,7 @@
     "prettify": "prettier --write index.js"
   },
   "bugs": {
-    "url": "https://github.com/vemel/keep-a-changelog/issues"
+    "url": "https://github.com/vemel/update-changelog/issues"
   },
   "devDependencies": {
     "prettier": "1.19.1"
