@@ -14,6 +14,8 @@ This Action keeps your CHANGELOG.md up to date.
 
 - Create `CHANGELOG.md` file using [keep a changelog](https://keepachangelog.com/en/1.0.0/) format
 - Use the example workflow to create a PR for eash release automatically.
+- Use `Keep a changelog` style in your PR notes to automatically include these
+  entries to ``CHANGELOG.md` on release
 
 ## Examples
 
