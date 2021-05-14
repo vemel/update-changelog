@@ -69,7 +69,7 @@ jobs:
 - `version` - New product version, defaults to env `VERSION`
 - `token` - GitHub Token, defaults to env `GITHUB_TOKEN`
 - `repository` - GitHub repository name, defaults to env `GITHUB_REPOSITORY`
-- `path` - New product version, defaults to `./CHANGELOG.md`
+- `path` - Path to the `CHANGELOG.md` file, defaults to `./CHANGELOG.md`
 - `release-marker` - Case-insensitive release marker in PR title, defaults to `release`
 
 ### Outputs
