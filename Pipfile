@@ -5,11 +5,12 @@ name = "pypi"
 
 [dev-packages]
 pylint = "*"
-black = "==19.10b0"
+black = "*"
+isort = "*"
 mypy = "*"
 
 [packages]
-pygithub = "1.46"
+pygithub = "1.55"
 
 [requires]
 python_version = "3.8"
