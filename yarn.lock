@@ -2,88 +2,87 @@
 # yarn lockfile v1
 
 
-"@actions/core@^1.2.0", "@actions/core@^1.2.6":
-  "integrity" "sha512-ZQYitnqiyBc3D+k7LsgSBmMDVkOVidaagDG7j3fOym77jNunWRuYx7VSHa9GNfFZh+zh61xsCjRj4JxMZlDqTA=="
-  "resolved" "https://registry.npmjs.org/@actions/core/-/core-1.2.6.tgz"
-  "version" "1.2.6"
+"@actions/core@^1.2.0", "@actions/core@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.9.1.tgz#97c0201b1f9856df4f7c3a375cdcdb0c2a2f750b"
+  dependencies:
+    "@actions/http-client" "^2.0.1"
+    uuid "^8.3.2"
 
 "@actions/exec@^1.0.0", "@actions/exec@^1.0.3":
-  "integrity" "sha512-TogJGnueOmM7ntCi0ASTUj4LapRRtDfj57Ja4IhPmg2fls28uVOPbAn8N+JifaOumN2UG3oEO/Ixek2A4NcYSA=="
-  "resolved" "https://registry.npmjs.org/@actions/exec/-/exec-1.0.3.tgz"
-  "version" "1.0.3"
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@actions/exec/-/exec-1.0.3.tgz"
   dependencies:
     "@actions/io" "^1.0.1"
 
 "@actions/http-client@^1.0.3":
-  "integrity" "sha512-VRYHGQV1rqnROJqdMvGUbY/Kn8vriQe/F9HR2AlYHzmKuM/p3kjNuXhmdBfcVgsvRWTz5C5XW5xvndZrVBuAYg=="
-  "resolved" "https://registry.npmjs.org/@actions/http-client/-/http-client-1.0.11.tgz"
-  "version" "1.0.11"
+  version "1.0.11"
+  resolved "https://registry.npmjs.org/@actions/http-client/-/http-client-1.0.11.tgz"
   dependencies:
-    "tunnel" "0.0.6"
+    tunnel "0.0.6"
+
+"@actions/http-client@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@actions/http-client/-/http-client-2.0.1.tgz#873f4ca98fe32f6839462a6f046332677322f99c"
+  dependencies:
+    tunnel "^0.0.6"
 
 "@actions/io@^1.0.1":
-  "integrity" "sha512-J8KuFqVPr3p6U8W93DOXlXW6zFvrQAJANdS+vw0YhusLIq+bszW8zmK2Fh1C2kDPX8FMvwIl1OUcFgvJoXLbAg=="
-  "resolved" "https://registry.npmjs.org/@actions/io/-/io-1.0.2.tgz"
-  "version" "1.0.2"
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/@actions/io/-/io-1.0.2.tgz"
 
 "@actions/tool-cache@^1.3.1":
-  "integrity" "sha512-sKoEJv0/c7WzjPEq2PO12Sc8QdEp58XIBHMm3c4lUn/iZWgLz9HBeCuFGpLQjDvXJNfLZ4g+WD+rMjgOmpH4Ag=="
-  "resolved" "https://registry.npmjs.org/@actions/tool-cache/-/tool-cache-1.3.1.tgz"
-  "version" "1.3.1"
+  version "1.3.1"
+  resolved "https://registry.npmjs.org/@actions/tool-cache/-/tool-cache-1.3.1.tgz"
   dependencies:
     "@actions/core" "^1.2.0"
     "@actions/exec" "^1.0.0"
     "@actions/http-client" "^1.0.3"
     "@actions/io" "^1.0.1"
-    "semver" "^6.1.0"
-    "uuid" "^3.3.2"
+    semver "^6.1.0"
+    uuid "^3.3.2"
 
-"inherits@2.0.3":
-  "integrity" "sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4="
-  "resolved" "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz"
-  "version" "2.0.3"
+inherits@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz"
 
-"path@^0.12.7":
-  "integrity" "sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8="
-  "resolved" "https://registry.npmjs.org/path/-/path-0.12.7.tgz"
-  "version" "0.12.7"
+path@^0.12.7:
+  version "0.12.7"
+  resolved "https://registry.npmjs.org/path/-/path-0.12.7.tgz"
   dependencies:
-    "process" "^0.11.1"
-    "util" "^0.10.3"
+    process "^0.11.1"
+    util "^0.10.3"
 
-"prettier@1.19.1":
-  "integrity" "sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew=="
-  "resolved" "https://registry.npmjs.org/prettier/-/prettier-1.19.1.tgz"
-  "version" "1.19.1"
+prettier@1.19.1:
+  version "1.19.1"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-1.19.1.tgz"
 
-"process@^0.11.1":
-  "integrity" "sha1-czIwDoQBYb2j5podHZGn1LwW8YI="
-  "resolved" "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
-  "version" "0.11.10"
+process@^0.11.1:
+  version "0.11.10"
+  resolved "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
 
-"semver@^6.1.0":
-  "integrity" "sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw=="
-  "resolved" "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"
-  "version" "6.3.0"
+semver@^6.1.0:
+  version "6.3.0"
+  resolved "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"
 
-"semver@^7.1.3":
-  "integrity" "sha512-ekM0zfiA9SCBlsKa2X1hxyxiI4L3B6EbVJkkdgQXnSEEaHlGdvyodMruTiulSRWMMB4NeIuYNMC9rTKTz97GxA=="
-  "resolved" "https://registry.npmjs.org/semver/-/semver-7.1.3.tgz"
-  "version" "7.1.3"
+semver@^7.1.3:
+  version "7.1.3"
+  resolved "https://registry.npmjs.org/semver/-/semver-7.1.3.tgz"
 
-"tunnel@0.0.6":
-  "integrity" "sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg=="
-  "resolved" "https://registry.npmjs.org/tunnel/-/tunnel-0.0.6.tgz"
-  "version" "0.0.6"
+tunnel@0.0.6, tunnel@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.npmjs.org/tunnel/-/tunnel-0.0.6.tgz"
 
-"util@^0.10.3":
-  "integrity" "sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A=="
-  "resolved" "https://registry.npmjs.org/util/-/util-0.10.4.tgz"
-  "version" "0.10.4"
+util@^0.10.3:
+  version "0.10.4"
+  resolved "https://registry.npmjs.org/util/-/util-0.10.4.tgz"
   dependencies:
-    "inherits" "2.0.3"
+    inherits "2.0.3"
 
-"uuid@^3.3.2":
-  "integrity" "sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A=="
-  "resolved" "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
-  "version" "3.4.0"
+uuid@^3.3.2:
+  version "3.4.0"
+  resolved "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
+
+uuid@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
